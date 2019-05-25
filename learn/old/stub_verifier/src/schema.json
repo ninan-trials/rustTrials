@@ -1,0 +1,40 @@
+"properties": {
+    "Address": {
+        "id": "/properties/Address",
+        "properties": {
+            "City": {
+                "id": "/properties/Address/properties/City",
+                "type": "string"
+            },
+            "Country": {
+                "id": "/properties/Address/properties/Country",
+                "type": "string"
+            },
+            "Street": {
+                "id": "/properties/Address/properties/Street",
+                "type": "string"
+            }
+        },
+        "type": "object"
+    },
+    "Age": {
+        "id": "/properties/Age",
+        "type": "integer"
+    },
+    "FirstName": {
+        "id": "/properties/FirstName",
+        "type": "string"
+    },
+    "LastName": {
+        "id": "/properties/LastName",
+        "type": "string"
+    },
+    "PhoneNumbers": {
+        "id": "/properties/PhoneNumbers",
+        "items": {
+            "id": "/properties/PhoneNumbers/items",
+            "type": "string"
+        },
+        "type": "array"
+    }
+}

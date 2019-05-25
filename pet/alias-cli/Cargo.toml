@@ -1,0 +1,7 @@
+[package]
+name = "alias_cli"
+version = "0.0.1"
+authors = ["ninanjohn"]
+edition = "2018"
+
+[dependencies]

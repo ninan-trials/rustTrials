@@ -1,0 +1,61 @@
+{
+  "group": "defaultGroup",
+  "pipeline": {
+    "label_template": "${COUNT}",
+    "lock_behavior": "lockOnFailure",
+    "name": "5",
+    "template": null,
+    "materials": [
+      {
+        "type": "git",
+        "attributes": {
+          "url": "git@github.com:jpninanjohn/MarsRover.git",
+          "destination": null,
+          "filter": null,
+          "invert_filter": false,
+          "name": null,
+          "auto_update": false,
+          "branch": "master",
+          "submodule_folder": null,
+          "shallow_clone": false
+        }
+      }
+    ],
+    "stages": [
+      {
+        "name": "stage1",
+        "fetch_materials": true,
+        "clean_working_directory": false,
+        "never_cleanup_artifacts": false,
+        "approval": {
+          "type": "success",
+          "authorization": {
+            "roles": [],
+            "users": []
+          }
+        },
+        "environment_variables": [],
+        "jobs": [
+          {
+            "name": "defaultJob",
+            "run_instance_count": null,
+            "timeout": 0,
+            "environment_variables": [],
+            "resources": [],
+            "tasks": [
+              {
+                "type": "exec",
+                "attributes": {
+                  "run_if": [
+                    "passed"
+                  ],
+                  "command": "ls"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
